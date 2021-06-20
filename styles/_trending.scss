@@ -1,0 +1,104 @@
+.trending-topics {
+    @include font(18, 25);
+    margin: 30px 0 48px;
+    width: vw(210, 375);
+    min-width: 210px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    &__title {
+        @include bold;
+    }
+    &__item {
+        display: inline;
+        &:nth-child(-n+4)::after {
+            content: ", ";
+        }
+        & a {
+            text-decoration: none;
+            color: $purple;
+        }
+    }
+}
+
+.trending-box {
+    background-color: $white-light;
+    text-align: center;
+    &__title {
+        @include font(25, 30);
+        @include bold;
+        padding: 44px 0 9px;
+    }
+    &__info {
+        color: black;
+        @include font(16, 23);
+        & span::after {
+            content: '\A';
+            white-space: pre;
+        }
+    }
+    &__button {
+        display: none;
+    }
+}
+
+.gifos-carrousel {
+    height: 187px;
+    padding: 32px 0 82px;
+    display: flex;
+    overflow: scroll;
+}
+
+@media screen and (min-width: 768px) {
+    .trending-box__info span::after {
+        white-space: normal;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .trending-topics {
+        margin: 73px 0 102px;
+    }
+    .trending-box {
+        position: relative;
+        &__title {
+            @include font(30, 30);
+            padding: 65px 0 14px;
+        }
+        &__info {
+            @include font(18, 22);
+        }
+        &__button {
+            display: inherit;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $white-light;
+            border: $purple solid 1px;
+            width: 40px;
+            height: 40px;
+            font-size: 14px;
+            color: $purple;
+            outline: none;
+            &:hover {
+                background-color: $purple;
+                color: white;
+            }
+            &-left {
+                left: vw(94, 1440);
+            }
+            &-right {
+                right: vw(92, 1440);
+            }
+        }
+    }
+    .gifos-carrousel {
+        height: vw(275, 1440);
+        padding: 52px 0 182px;
+        width: vw(1127, 1440);
+        margin: auto;
+        align-items: center;
+        overflow: hidden;
+    }
+}

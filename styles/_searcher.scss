@@ -1,0 +1,110 @@
+.gifos-searcher {
+    position: relative;
+}
+
+.gifos-searcher__title {
+    margin: 2px 0 27px;
+    width: vw(286, 375);
+    max-width: 467px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    @include bold;
+    color: $purple;
+    @include font(30, 36);
+    text-align: center;
+    & span {
+        color: $turquoise;
+    }
+}
+
+.gifos-searcher__image {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: vw(273, 375);
+    max-width: 399px;
+    height: auto;
+}
+
+.wrapper {
+    position: relative;
+    height: 50px;
+}
+
+.search-bar {
+    width: vw(334, 375);
+    max-width: 551px;
+    min-height: 50px;
+    border: $purple solid 1px;
+    border-radius: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    &__input {
+        position: absolute;
+        left: 55px;
+        top: 15px;
+        width: vw(215, 375);
+        max-width: 420px;
+        border: 0;
+        padding: 0;
+        margin: 0px;
+        outline: none;
+        @include font(16, 20);
+        @include regular;
+    }
+    &__button {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 20px;
+        background-color: white;
+        outline: none;
+        color: $purple;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .gifos-searcher__title {
+        margin: 75px 0 25px;
+        @include font(40, 50);
+        max-width: 600px;
+    }
+}
+
+
+.active-search {
+    &__suggestions-list {
+        border-top: 1px solid $gray-line;
+        position: relative;
+        width: vw(286, 375);
+        max-width: 503px;
+        padding: 14px 0 8px;
+        margin: 0 24px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__suggestion {
+        list-style: none;
+        color: $gray-line;
+        margin-bottom: 10px;
+        @include font(16, 20);
+        cursor: pointer;
+        & .icon-icon-search {
+            margin-right: 15px;
+        }
+    }
+    &__search {
+        color: $gray-line;
+        left: 20px;
+        right: auto;
+    }
+    &__close {
+        top: 18px;
+        font-size: 14px;
+    }
+}

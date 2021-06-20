@@ -1,0 +1,110 @@
+.modal,
+.my-gifs__modal {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.fullsize {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-exit,
+    .my-gifos__fullsize-exit {
+        font-size: 14px;
+        width: 14px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: $purple;
+        cursor: pointer;
+        position: relative;
+        left: vw(145, 375);
+        outline: none;
+    }
+    &-gifo,
+    .my-gifos__fullsize-gifo {
+        width: vw(318, 375);
+        height: auto;
+        padding: 69px 0 14px;
+    }
+    &-footer {
+        display: flex;
+        width: vw(318, 375);
+        justify-content: space-between;
+    }
+    &-info-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 20px
+    }
+    &-user,
+    .my-gifos__fullsize-user {
+        color: black;
+        @include font(15, 18);
+    }
+    &-title,
+    .my-gifos__fullsize-title {
+        color: black;
+        @include bold;
+        @include font(16, 20);
+    }
+    &-btn-wrap,
+    .my-gifos__fullsize-btn-wrap {
+        width: 93px;
+        display: flex;
+        justify-content: space-between
+    }
+    &-button,
+    .my-gifs__fullsize-button {
+        background-color: rgba(255, 255, 255, 0.2);
+        width: 36px;
+        height: 36px;
+        border: $gray-line 1px solid;
+        border-radius: 6px;
+        font-size: 18px;
+        opacity: 70%;
+        outline: none;
+        &:hover {
+            opacity: 100%;
+            background-color: white;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .fullsize {
+        &-exit,
+        .my-gifos__fullsize-exit {
+            font-size: 15px;
+            width: 15px;
+            left: vw(240, 768);
+        }
+        &-gifo,
+        .my-gifos__fullsize-gifo {
+            width: vw(500, 768);
+        }
+        &-footer {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .fullsize {
+        &-exit,
+        .my-gifos__fullsize-exit {
+            left: vw(387, 1440);
+        }
+        &-gifo,
+        .my-gifos__fullsize-gifo {
+            width: vw(695, 1440);
+            height: 385px;
+        }
+    }
+}

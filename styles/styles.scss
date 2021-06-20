@@ -1,0 +1,32 @@
+@import './reset';
+@font-face {
+    font-family: “ProximaNova-Bold”;
+    src: url('../Fonts/FontsFree-Net-Proxima-Nova-Bold.otf');
+}
+
+@font-face {
+    font-family: “ProximaNova-Regular”;
+    src: url('../Fonts/FontsFree-Net-proxima_nova_reg-webfont.ttf');
+}
+
+@font-face {
+    font-family: “Roboto-Black“;
+    src: url('../Fonts/Roboto-Black.ttf');
+}
+
+@import './variables_mixins_functions';
+@import './general';
+@import './gifos-cards';
+@import './favorites-my_gifs-create_gifs';
+@import './general';
+@import './navigation-bar';
+@import './searcher';
+@import './search-results';
+@import './trending';
+@import './footer';
+@import './modal';
+@import './create-gifos';
+@import './dark-mode';
+.hidden {
+    display: none;
+}

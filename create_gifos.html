@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Gifos</title>
+    <link rel="icon" sizes="32x32" href="./assets/logo-mobile.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./assets/icomoon/style.css">
+</head>
+
+<body class="create-gifos">
+    <header class="header">
+        <nav class="navigation-bar">
+            <input class="navigation-bar__checkbox-menu" type="checkbox" name="checkbox-menu" id="checkbox-menu">
+            <i class="icon-burger"></i>
+            <i class="icon-close"></i>
+            <a class="home-link" href="index.html"><img class="navigation-bar__logo" src="./assets/logo-mobile.svg" alt="Logo página de GifOS"></a>
+            <ul class="navigation-bar__menu">
+                <li><a href="#" class="menu-item dark-mode">Modo Nocturno</a></li>
+                <li><a href="#" class="menu-item day-mode hidden">Modo Diurno</a></li>
+                <li><a href="favorites.html" class="menu-item">Favoritos</a></li>
+                <li><a href="my_gifs.html" class="menu-item">Mis GIFOS</a></li>
+            </ul>
+            <a class="navigation-bar__button current-page-create-gifos" href="./create_gifos.html"><i class="icon-button-crear-gifo"></i></a>
+        </nav>
+    </header>
+    <main class="create-gifos_main">
+        <section class="screen">
+            <div class="screen-decoration deco1"></div>
+            <div class="screen-decoration deco2"></div>
+            <div class="screen-decoration deco3"></div>
+            <div class="screen-decoration deco4"></div>
+            <div class="create-gifos__wrapper">
+                <div class="overlay overlay_create-gifos hidden">
+                    <div class="overlay-icon uploading"><i class="icon-loader"></i></div>
+                    <p class="overlay-info uploading">Estamos subiendo tu gifo...</p>
+                    <div class="overlay-icon uploaded hidden"><i class="icon-check"></i></div>
+                    <p class="overlay-info uploaded uploaded hidden">GIFO subido con éxito</p>
+                    <div class="overlay__buttons-wrapper uploaded hidden">
+                        <button class="card-button card-button__download" type="button"><i class="icon-icon-download"></i></button>
+                        <button class="card-button card-button__link" type="button"><i class="icon-icon-link"></i></button>
+                    </div>
+                </div>
+                <video class="create-gifos__wrapper-image hidden" src="#"></video>
+                <h1 class="create-gifos__wrapper-title">Aquí podrás<span class="line-break"></span>crear tus propios <span class="color-change">GIFOS</span></h1>
+                <p class="create-gifos__wrapper-info">¡Crea tu GIFO en sólo 3 pasos!<span class="line-break"></span>(sólo necesitas una cámara para grabar un video)</p>
+                <div class="camera-wrapper">
+                    <img class="camera" src="./assets/camara.svg" alt="Camera image">
+                    <img class="light" src="./assets/element-luz-camara.svg" alt="Camera light image">
+                </div>
+                <img class="film" src="./assets/pelicula.svg" alt="Film image">
+            </div>
+        </section>
+        <div class="create-gifos-status">
+            <div class="create-gifos-status__counter">
+                <div class="counter first">1</div>
+                <div class="counter second">2</div>
+                <div class="counter third">3</div>
+            </div>
+            <p class="create-gifos-status__timming hidden">00:00</p>
+            <button class="create-gifos-status__repeat-capture hidden" type="button">REPETIR CAPTURA</button>
+            <button class="links-content__button start" type="button">COMENZAR</button>
+            <button class="links-content__button record hidden" type="button">GRABAR</button>
+            <button class="links-content__button finish hidden" type="button">FINALIZAR</button>
+            <button class="links-content__button upload hidden" type="button">SUBIR GIFO</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="social-media">
+            <p class="social-media__share">Compartir en:</p>
+            <div class="social-media__icons">
+                <a href="https://www.facebook.com/" target="_blank"><i class="icon-icon_facebook"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="icon-icon-twitter"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="icon-icon_instagram"></i></a>
+            </div>
+        </div>
+        <p class="copy-rights">© GIFOS 2021 All Rights Reserved.</p>
+    </footer>
+    <script type="module" src="./scripts/dark_mode.js"></script>
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script type="module" src="./scripts/create_gifo.js"></script>
+</body>
+
+</html>
